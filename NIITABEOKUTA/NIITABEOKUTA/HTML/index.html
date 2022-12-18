@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NIIT Abeokuta Web App</title>
+    <link rel="stylesheet" href="/NIITABEOKUTA/CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/NIITABEOKUTA/Images/niit-logo.png"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="#">About NIIT</a>
+      <a href="#">Services</a>
+      <a href="#">Courses</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Sign up</a>
+      <a href="#">Login</a>
+    </div>
+    <!-------------- GENERAL CONTAINER BEGINS ------------>
+    <div class="container">
+      <!------------------- HOME SECTION ------------------------->
+      <div class="home-section" data-aos="fade-down"
+    data-aos-easing="linear"
+      data-aos-duration="4000">
+        <header>
+          <div class="headerDiv">
+            <div class="logoDiv">
+              <h1>NIIT</h1>
+              <b>Abeokuta</b>
+            </div>
+            <div class="sideOpenDiv">
+              <i onclick="openNav()" class="fas fa-bars"></i>
+            </div>
+          </div>
+        </header>
+        <div class="marquee">
+          <marquee height="auto" direction="left"
+            >Welcome To NIIT Abeokuta!</marquee
+          >
+        </div>
+        <div
+          class="text_contain_div"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          <div class="text_contain">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              eaque nobis iste magnam molestiae accusamus!
+            </p>
+          </div>
+        </div>
+      </div>
+      <!------------------ HOME SECTION ENDS ------------------------>
+      <div class="about_section">
+        <div
+          class="div1"
+          data-aos="fade-left"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+        >
+          <img src="/NIITABEOKUTA/Images/img2.jpg" alt="" />
+          <div class="innerdiv1">
+            <h1>ABOUT NIIT ABEOKUTA</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+              fugiat rerum fuga blanditiis aut at repellat, tenetur ipsa illum
+              repellendus esse alias ipsam unde, distinctio labore, aliquid
+              reprehenderit perferendis! Odio facere nisi asperiores alias
+              reprehenderit reiciendis natus quae rem provident, nostrum velit
+              libero numquam. Nam consequatur dicta exercitationem odit qui hic
+              voluptates repellendus cumque. Eligendi corporis totam nulla
+              voluptatum mollitia, modi magnam molestias blanditiis dolore
+              doloremque magni, alias impedit quisquam?
+            </p>
+            <a href="#"><button>Learn More</button></a>
+          </div>
+        </div>
+
+        <div
+          class="div2"
+          data-aos="fade-right"
+          data-aos-easing="linear"
+          data-aos-duration="6000"
+        >
+        <img src="/NIITABEOKUTA/Images/img3.jpg" alt="" />
+        <div class="innerdiv2">
+          
+          <h1>WHY NIIT?</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+            fugiat rerum fuga blanditiis aut at repellat, tenetur ipsa illum
+            repellendus esse alias ipsam unde, distinctio labore, aliquid
+            reprehenderit perferendis! Odio facere nisi asperiores alias
+            reprehenderit reiciendis natus quae rem provident, nostrum velit
+            libero numquam. Nam consequatur dicta exercitationem odit qui hic
+            voluptates repellendus cumque. Eligendi corporis totam nulla
+            voluptatum mollitia, modi magnam molestias blanditiis dolore
+            doloremque magni, alias impedit quisquam?
+          </p>
+          <a href="#"><button>Learn More</button></a>
+        </div>
+          
+        </div>
+      </div>
+    </div>
+    <!------------- GENERAL CONTAINER ENDS ----------------->
+    <!-- <script src="/NIITABEOKUTA/JavaScript/script.js"></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      "use strict";
+      AOS.init();
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 4000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>
